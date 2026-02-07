@@ -1,0 +1,76 @@
+{
+  "site": {
+    "title": "Law Office"
+  },
+  "nav": {
+    "about": "About",
+    "practice": "Practice Areas",
+    "location": "Location",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Property Law Expertise",
+    "subtitle": "Reliable legal guidance for all aspects of property matters",
+    "cta": "Contact Us"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Specialized Property Law Expert",
+    "description1": "With years of experience in property law, we offer comprehensive legal services tailored to each client's unique needs. From advising on complex contracts to representing in disputes, our expertise covers all aspects of property matters.",
+    "description2": "Our mission is to provide clear, effective, and tailored legal guidance that protects your rights and interests in all aspects of property law.",
+    "stat1": "Years of Experience",
+    "stat2": "Successful Cases",
+    "stat3": "Client Dedication"
+  },
+  "practice": {
+    "title": "Practice Areas",
+    "subtitle": "Specialized in all aspects of property law",
+    "area1": {
+      "title": "Real Estate Purchase Agreements",
+      "description": "Advising and preparing all types of contracts related to buying and selling real estate, ensuring legal security and protection of your interests."
+    },
+    "area2": {
+      "title": "Property Disputes",
+      "description": "Representation in judicial and extrajudicial property dispute resolution proceedings, including boundary disputes, ownership relations, and other matters."
+    },
+    "area3": {
+      "title": "Property Inheritance",
+      "description": "Comprehensive advice in inheritance proceedings, including probate procedures, property transfer, and resolution of inheritance disputes."
+    },
+    "area4": {
+      "title": "Contracts and Leases",
+      "description": "Drafting and reviewing lease agreements, rental contracts, preliminary agreements, and other legal documents related to property use and management."
+    }
+  },
+  "location": {
+    "title": "Our Location",
+    "subtitle": "Visit us at our office",
+    "address": {
+      "title": "Address"
+    },
+    "hours": {
+      "title": "Office Hours"
+    },
+    "contact": {
+      "title": "Contact"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have legal questions? Contact us.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message",
+      "privacy": "I agree to the Privacy Policy",
+      "submit": "Send Inquiry"
+    }
+  },
+  "footer": {
+    "description": "Property law expertise with years of experience in providing legal services.",
+    "links": "Useful Links",
+    "copyright": "All rights reserved"
+  }
+}

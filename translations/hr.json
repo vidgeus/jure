@@ -1,0 +1,76 @@
+{
+  "site": {
+    "title": "Odvjetnički Ured"
+  },
+  "nav": {
+    "about": "O nama",
+    "practice": "Područja prakse",
+    "location": "Lokacija",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Stručnost u imovinskom pravu",
+    "subtitle": "Pouzdane pravne smjernice za sve aspekte imovinskih pitanja",
+    "cta": "Kontaktirajte nas"
+  },
+  "about": {
+    "title": "O nama",
+    "subtitle": "Specijalizirani stručnjak za imovinsko pravo",
+    "description1": "S višegodišnjim iskustvom u području imovinskog prava, nudimo sveobuhvatne pravne usluge prilagođene jedinstvenim potrebama svakog klijenta. Od savjetovanja o složenim ugovorima do zastupanja u sporovima, naša stručnost pokriva sve aspekte imovinskih pitanja.",
+    "description2": "Naša misija je pružiti jasne, djelotvorne i prilagođene pravne smjernice koje štite vaša prava i interese u svim aspektima imovinskog prava.",
+    "stat1": "Godina iskustva",
+    "stat2": "Uspješnih predmeta",
+    "stat3": "Predanost klijentima"
+  },
+  "practice": {
+    "title": "Područja prakse",
+    "subtitle": "Specijalizirani za sve aspekte imovinskog prava",
+    "area1": {
+      "title": "Ugovori o kupoprodaji nekretnina",
+      "description": "Savjetovanje i priprema svih vrsta ugovora vezanih uz kupnju i prodaju nekretnina, osiguravajući pravnu sigurnost i zaštitu vaših interesa."
+    },
+    "area2": {
+      "title": "Imovinski sporovi",
+      "description": "Zastupanje u sudskim i vansudskim postupcima rješavanja imovinskih sporova, uključujući granične sporove, vlasničke odnose i druga pitanja."
+    },
+    "area3": {
+      "title": "Nasljeđivanje nekretnina",
+      "description": "Kompleksno savjetovanje u postupcima nasljeđivanja, uključujući ostavinske postupke, prijenos vlasništva i rješavanje nasljednih sporova."
+    },
+    "area4": {
+      "title": "Ugovori i zakup",
+      "description": "Izrada i pregled ugovora o zakupu, najmu, predugovora i drugih pravnih akata vezanih uz korištenje i upravljanje nekretninama."
+    }
+  },
+  "location": {
+    "title": "Naša lokacija",
+    "subtitle": "Posjetite nas u našem uredu",
+    "address": {
+      "title": "Adresa"
+    },
+    "hours": {
+      "title": "Radno vrijeme"
+    },
+    "contact": {
+      "title": "Kontakt"
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Imate li pravnih pitanja? Kontaktirajte nas.",
+    "form": {
+      "name": "Ime i prezime",
+      "email": "Email",
+      "phone": "Telefon",
+      "subject": "Predmet",
+      "message": "Poruka",
+      "privacy": "Slažem se s Politikom privatnosti",
+      "submit": "Pošalji upit"
+    }
+  },
+  "footer": {
+    "description": "Stručnost u imovinskom pravu s višegodišnjim iskustvom u pružanju pravnih usluga.",
+    "links": "Korisne poveznice",
+    "copyright": "Sva prava pridržana"
+  }
+}
