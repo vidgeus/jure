@@ -4,20 +4,16 @@
 let currentLang = 'hr';
 let translations = {};
 
-// Load translations
-async function loadTranslations() {
-    try {
-        const hrResponse = await fetch('translations/hr.json');
-        const enResponse = await fetch('translations/en.json');
-
-        translations.hr = await hrResponse.json();
-        translations.en = await enResponse.json();
-
-        // Initialize with default language
-        setLanguage(currentLang);
-    } catch (error) {
-        console.error('Error loading translations:', error);
+// Load translations from translations.js (loaded via <script> so this works
+// when the site is opened directly via file:// — fetch() of local files is
+// blocked by browsers in that case).
+function loadTranslations() {
+    if (!window.__translations) {
+        console.error('Translations missing: ensure translations.js is loaded before app.js');
+        return;
     }
+    translations = window.__translations;
+    setLanguage(currentLang);
 }
 
 // Set language and update content
@@ -109,6 +105,98 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 });
 
 // ===========================
+// Theme Switcher
+// ===========================
+function setTheme(theme) {
+    if (theme && theme !== 'default') {
+        document.documentElement.setAttribute('data-theme', theme);
+    } else {
+        document.documentElement.removeAttribute('data-theme');
+    }
+    try {
+        localStorage.setItem('site-theme', theme || 'default');
+    } catch (e) {
+        // localStorage not available; ignore
+    }
+}
+
+const themeSelect = document.getElementById('theme-select');
+if (themeSelect) {
+    const savedTheme = (() => {
+        try { return localStorage.getItem('site-theme'); } catch (e) { return null; }
+    })() || 'default';
+    themeSelect.value = savedTheme;
+    setTheme(savedTheme);
+
+    themeSelect.addEventListener('change', () => {
+        setTheme(themeSelect.value);
+    });
+}
+
+// ===========================
+// Hero Blur Control
+// ===========================
+function setHeroBlur(value) {
+    const n = Math.max(0, Math.min(100, Number(value) || 0));
+    document.documentElement.style.setProperty('--hero-blur', `${n}px`);
+    try {
+        localStorage.setItem('hero-blur', String(n));
+    } catch (e) {
+        // localStorage not available; ignore
+    }
+    return n;
+}
+
+// ===========================
+// Presentation Mode (hides theme/blur controls, splits navbar in thirds)
+// ===========================
+function setPresentationMode(enabled) {
+    if (enabled) {
+        document.documentElement.setAttribute('data-presentation', 'true');
+    } else {
+        document.documentElement.removeAttribute('data-presentation');
+    }
+    try {
+        localStorage.setItem('presentation-mode', enabled ? 'true' : 'false');
+    } catch (e) {
+        // localStorage not available; ignore
+    }
+}
+
+const presentationToggle = document.getElementById('presentation-toggle');
+if (presentationToggle) {
+    const savedPresentation = (() => {
+        try { return localStorage.getItem('presentation-mode') === 'true'; }
+        catch (e) { return false; }
+    })();
+    presentationToggle.checked = savedPresentation;
+    setPresentationMode(savedPresentation);
+
+    presentationToggle.addEventListener('change', () => {
+        setPresentationMode(presentationToggle.checked);
+    });
+}
+
+const blurInput = document.getElementById('blur-input');
+if (blurInput) {
+    const savedBlur = (() => {
+        try { return localStorage.getItem('hero-blur'); } catch (e) { return null; }
+    })();
+    const initialBlur = savedBlur !== null ? Number(savedBlur) : Number(blurInput.value);
+    const applied = setHeroBlur(initialBlur);
+    blurInput.value = String(applied);
+
+    blurInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            const applied = setHeroBlur(blurInput.value);
+            blurInput.value = String(applied);
+            blurInput.blur();
+        }
+    });
+}
+
+// ===========================
 // Contact Form with EmailJS
 // ===========================
 const contactForm = document.getElementById('contact-form');
@@ -136,7 +224,13 @@ contactForm.addEventListener('submit', async (e) => {
     const submitBtn = contactForm.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
     submitBtn.disabled = true;
-    submitBtn.textContent = currentLang === 'hr' ? 'Šaljem...' : 'Sending...';
+    const sendingText = {
+        hr: 'Šaljem...',
+        en: 'Sending...',
+        it: 'Invio in corso...',
+        de: 'Senden...'
+    };
+    submitBtn.textContent = sendingText[currentLang] || sendingText.en;
 
     try {
         // Send email using EmailJS
@@ -148,10 +242,14 @@ contactForm.addEventListener('submit', async (e) => {
         );
 
         // Show success message
+        const successText = {
+            hr: 'Hvala! Vaša poruka je uspješno poslana. Javit ćemo vam se uskoro.',
+            en: 'Thank you! Your message has been sent successfully. We will contact you soon.',
+            it: 'Grazie! Il vostro messaggio è stato inviato con successo. Vi contatteremo presto.',
+            de: 'Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns in Kürze bei Ihnen melden.'
+        };
         formMessage.className = 'form-message success';
-        formMessage.textContent = currentLang === 'hr' 
-            ? 'Hvala! Vaša poruka je uspješno poslana. Javit ćemo vam se uskoro.'
-            : 'Thank you! Your message has been sent successfully. We will contact you soon.';
+        formMessage.textContent = successText[currentLang] || successText.en;
 
         // Reset form
         contactForm.reset();
@@ -160,10 +258,14 @@ contactForm.addEventListener('submit', async (e) => {
         console.error('Error sending email:', error);
 
         // Show error message
+        const errorText = {
+            hr: 'Došlo je do greške. Molimo pokušajte ponovno ili nas kontaktirajte telefonom.',
+            en: 'An error occurred. Please try again or contact us by phone.',
+            it: 'Si è verificato un errore. Riprovate o contattateci telefonicamente.',
+            de: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns telefonisch.'
+        };
         formMessage.className = 'form-message error';
-        formMessage.textContent = currentLang === 'hr'
-            ? 'Došlo je do greške. Molimo pokušajte ponovno ili nas kontaktirajte telefonom.'
-            : 'An error occurred. Please try again or contact us by phone.';
+        formMessage.textContent = errorText[currentLang] || errorText.en;
     } finally {
         // Re-enable submit button
         submitBtn.disabled = false;
