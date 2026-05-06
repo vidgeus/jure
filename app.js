@@ -40,6 +40,12 @@ function setLanguage(lang) {
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.lang === lang);
     });
+
+    // Keep mobile language dropdown in sync
+    const languageSelect = document.getElementById('language-select');
+    if (languageSelect && languageSelect.value !== lang) {
+        languageSelect.value = lang;
+    }
 }
 
 // Helper function to get nested translation
@@ -87,10 +93,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-if (mobileMenuToggle) {
+if (mobileMenuToggle && navLinks) {
     mobileMenuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
         mobileMenuToggle.classList.toggle('active');
+    });
+
+    // Close the menu when a link is tapped so the page can scroll to the target.
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            mobileMenuToggle.classList.remove('active');
+        });
     });
 }
 
@@ -103,6 +117,13 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
         setLanguage(lang);
     });
 });
+
+const languageSelect = document.getElementById('language-select');
+if (languageSelect) {
+    languageSelect.addEventListener('change', () => {
+        setLanguage(languageSelect.value);
+    });
+}
 
 // ===========================
 // Theme Switcher
