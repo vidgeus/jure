@@ -145,7 +145,7 @@ const themeSelect = document.getElementById('theme-select');
 if (themeSelect) {
     const savedTheme = (() => {
         try { return localStorage.getItem('site-theme'); } catch (e) { return null; }
-    })() || 'default';
+    })() || 'marble';
     themeSelect.value = savedTheme;
     setTheme(savedTheme);
 
@@ -187,8 +187,11 @@ function setPresentationMode(enabled) {
 const presentationToggle = document.getElementById('presentation-toggle');
 if (presentationToggle) {
     const savedPresentation = (() => {
-        try { return localStorage.getItem('presentation-mode') === 'true'; }
-        catch (e) { return false; }
+        try {
+            const v = localStorage.getItem('presentation-mode');
+            if (v === null) return true; // default ON for first-time visitors
+            return v === 'true';
+        } catch (e) { return true; }
     })();
     presentationToggle.checked = savedPresentation;
     setPresentationMode(savedPresentation);
