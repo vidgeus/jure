@@ -221,146 +221,85 @@ if (blurInput) {
 }
 
 // ===========================
-// Contact Form with EmailJS
+// Contact Form (Web3Forms)
 // ===========================
+// Web3Forms delivers form submissions to the email associated with the access
+// key below. Get a free key (no account needed) at https://web3forms.com —
+// enter the recipient address (testjurelaw@gmail.com) and the key arrives by
+// email. Paste it into WEB3FORMS_ACCESS_KEY and submissions start working.
+const WEB3FORMS_ACCESS_KEY = '1d6bdc98-34d2-48f5-a303-b8bbcb08c4c4';
+
 const contactForm = document.getElementById('contact-form');
 const formMessage = document.getElementById('form-message');
 
-// EmailJS Configuration
-// IMPORTANT: Replace these with your actual EmailJS credentials
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; // Replace with your Service ID
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Replace with your Template ID
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // Replace with your Public Key
+const sendingText = {
+    hr: 'Šaljem...',
+    en: 'Sending...',
+    it: 'Invio in corso...',
+    de: 'Senden...'
+};
+const successText = {
+    hr: 'Hvala! Vaša poruka je uspješno poslana. Javit ćemo vam se uskoro.',
+    en: 'Thank you! Your message has been sent successfully. We will contact you soon.',
+    it: 'Grazie! Il vostro messaggio è stato inviato con successo. Vi contatteremo presto.',
+    de: 'Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns in Kürze bei Ihnen melden.'
+};
+const errorText = {
+    hr: 'Došlo je do greške. Molimo pokušajte ponovno ili nas kontaktirajte telefonom.',
+    en: 'An error occurred. Please try again or contact us by phone.',
+    it: 'Si è verificato un errore. Riprovate o contattateci telefonicamente.',
+    de: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns telefonisch.'
+};
 
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-    // Get form data
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value
-    };
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = sendingText[currentLang] || sendingText.en;
+        formMessage.style.display = '';
 
-    // Disable submit button
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.disabled = true;
-    const sendingText = {
-        hr: 'Šaljem...',
-        en: 'Sending...',
-        it: 'Invio in corso...',
-        de: 'Senden...'
-    };
-    submitBtn.textContent = sendingText[currentLang] || sendingText.en;
+        try {
+            const formData = new FormData(contactForm);
+            formData.set('access_key', WEB3FORMS_ACCESS_KEY);
+            formData.set('subject', `Upit (${formData.get('name') || 'website'}): ${formData.get('subject') || ''}`);
 
-    try {
-        // Send email using EmailJS
-        await emailjs.send(
-            EMAILJS_SERVICE_ID,
-            EMAILJS_TEMPLATE_ID,
-            formData,
-            EMAILJS_PUBLIC_KEY
-        );
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
 
-        // Show success message
-        const successText = {
-            hr: 'Hvala! Vaša poruka je uspješno poslana. Javit ćemo vam se uskoro.',
-            en: 'Thank you! Your message has been sent successfully. We will contact you soon.',
-            it: 'Grazie! Il vostro messaggio è stato inviato con successo. Vi contatteremo presto.',
-            de: 'Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns in Kürze bei Ihnen melden.'
-        };
-        formMessage.className = 'form-message success';
-        formMessage.textContent = successText[currentLang] || successText.en;
-
-        // Reset form
-        contactForm.reset();
-
-    } catch (error) {
-        console.error('Error sending email:', error);
-
-        // Show error message
-        const errorText = {
-            hr: 'Došlo je do greške. Molimo pokušajte ponovno ili nas kontaktirajte telefonom.',
-            en: 'An error occurred. Please try again or contact us by phone.',
-            it: 'Si è verificato un errore. Riprovate o contattateci telefonicamente.',
-            de: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns telefonisch.'
-        };
-        formMessage.className = 'form-message error';
-        formMessage.textContent = errorText[currentLang] || errorText.en;
-    } finally {
-        // Re-enable submit button
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-
-        // Hide message after 5 seconds
-        setTimeout(() => {
-            formMessage.style.display = 'none';
-        }, 5000);
-    }
-});
-
-// Alternative: FormSubmit.co (no JavaScript library needed)
-// Uncomment this section if you prefer to use FormSubmit.co instead of EmailJS
-/*
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.disabled = true;
-    submitBtn.textContent = currentLang === 'hr' ? 'Šaljem...' : 'Sending...';
-
-    try {
-        const formData = new FormData(contactForm);
-
-        // Replace YOUR_EMAIL with your actual email
-        const response = await fetch('https://formsubmit.co/YOUR_EMAIL@example.com', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
+            const data = await response.json().catch(() => ({}));
+            if (!response.ok || data.success !== true) {
+                throw new Error(data.message || `HTTP ${response.status}`);
             }
-        });
 
-        if (response.ok) {
             formMessage.className = 'form-message success';
-            formMessage.textContent = currentLang === 'hr' 
-                ? 'Hvala! Vaša poruka je uspješno poslana.'
-                : 'Thank you! Your message has been sent successfully.';
+            formMessage.textContent = successText[currentLang] || successText.en;
             contactForm.reset();
-        } else {
-            throw new Error('Form submission failed');
+        } catch (error) {
+            console.error('Contact form submission failed:', error);
+            formMessage.className = 'form-message error';
+            formMessage.textContent = errorText[currentLang] || errorText.en;
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 6000);
         }
-    } catch (error) {
-        formMessage.className = 'form-message error';
-        formMessage.textContent = currentLang === 'hr'
-            ? 'Došlo je do greške. Molimo pokušajte ponovno.'
-            : 'An error occurred. Please try again.';
-    } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-    }
-});
-*/
+    });
+}
 
 // ===========================
 // Initialization
 // ===========================
 document.addEventListener('DOMContentLoaded', () => {
-    // Load translations
     loadTranslations();
-
-    // Set current year in footer
     document.getElementById('current-year').textContent = new Date().getFullYear();
-
-    // Initialize EmailJS (if using EmailJS)
-    // Make sure to include EmailJS library in your HTML
-    if (typeof emailjs !== 'undefined') {
-        emailjs.init(EMAILJS_PUBLIC_KEY);
-    }
 });
 
 // ===========================

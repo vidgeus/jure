@@ -6,7 +6,8 @@
     --secondary-color: #34495e;
     --accent-color: #3498db;
     --text-dark: #2c3e50;
-    --text-light: #7f8c8d;
+    --text-light: #5a6373;
+    --hero-name-color: var(--accent-color);
     --bg-light: #ecf0f1;
     --bg-white: #ffffff;
     --border-color: #dfe6e9;
@@ -96,6 +97,7 @@ body {
     font-weight: 400;
     letter-spacing: 0.04em;
     opacity: 0.85;
+    align-self: center;
 }
 
 .logo-name {
@@ -289,7 +291,7 @@ body {
     font-weight: 700;
     margin-bottom: 2rem;
     line-height: 1.1;
-    color: var(--accent-color);
+    color: var(--hero-name-color, var(--accent-color));
 }
 
 .hero-quote {
@@ -955,6 +957,7 @@ body {
     --primary-color: #6b1f2d;
     --secondary-color: #8b2635;
     --accent-color: #a07a1a;
+    --hero-name-color: #d4a847;
     --text-dark: #2d1517;
     --text-light: #6b5d5e;
     --bg-light: #f5ede4;
@@ -980,6 +983,7 @@ body {
     --primary-color: #1e3a2f;
     --secondary-color: #2d5a3d;
     --accent-color: #8b6914;
+    --hero-name-color: #d4a847;
     --text-dark: #1a2920;
     --text-light: #5c6b5c;
     --bg-light: #efebe0;
@@ -1005,6 +1009,7 @@ body {
     --primary-color: #3a2618;
     --secondary-color: #5d3b22;
     --accent-color: #8b6914;
+    --hero-name-color: #d4a847;
     --text-dark: #2a1a0f;
     --text-light: #5d4a37;
     --bg-light: #ead9bb;
