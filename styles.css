@@ -106,12 +106,17 @@ body {
     white-space: nowrap;
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    font-family: var(--name-font, inherit);
 }
 
 .hero-name,
 .footer-name {
     text-transform: uppercase;
     letter-spacing: 0.04em;
+}
+
+.hero-name {
+    font-family: var(--name-font, inherit);
 }
 
 .logo:hover {
@@ -663,7 +668,8 @@ body {
    Presentation Mode (controls hidden, navbar split into thirds)
    =========================== */
 [data-presentation="true"] .theme-switcher,
-[data-presentation="true"] .blur-control {
+[data-presentation="true"] .blur-control,
+[data-presentation="true"] .font-control {
     display: none;
 }
 
@@ -738,7 +744,8 @@ body {
     /* Hide niche design controls on mobile to keep language switcher visible.
        The presentation toggle in the footer can still hide them on desktop. */
     .theme-switcher,
-    .blur-control {
+    .blur-control,
+    .font-control {
         display: none;
     }
 
@@ -882,6 +889,38 @@ body {
 
 @media (max-width: 768px) {
     .theme-select {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Font picker (lawyer name) */
+.font-control {
+    display: flex;
+    align-items: center;
+}
+
+.font-select {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-dark);
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 500;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.font-select:hover,
+.font-select:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .font-select {
         padding: 0.3rem 0.5rem;
         font-size: 0.85rem;
     }

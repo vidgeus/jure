@@ -155,6 +155,44 @@ if (themeSelect) {
 }
 
 // ===========================
+// Lawyer Name Font
+// ===========================
+const NAME_FONTS = {
+    'default':      '',
+    'josefin-slab': "'Josefin Slab', serif",
+    'eb-garamond':  "'EB Garamond', serif",
+    'playfair':     "'Playfair Display', serif",
+    'cinzel':       "'Cinzel', serif"
+};
+
+function setNameFont(value) {
+    const cssValue = NAME_FONTS[value] || '';
+    if (cssValue) {
+        document.documentElement.style.setProperty('--name-font', cssValue);
+    } else {
+        document.documentElement.style.removeProperty('--name-font');
+    }
+    try {
+        localStorage.setItem('name-font', value || 'default');
+    } catch (e) {
+        // localStorage not available; ignore
+    }
+}
+
+const fontSelect = document.getElementById('font-select');
+if (fontSelect) {
+    const savedFont = (() => {
+        try { return localStorage.getItem('name-font'); } catch (e) { return null; }
+    })() || 'default';
+    fontSelect.value = savedFont;
+    setNameFont(savedFont);
+
+    fontSelect.addEventListener('change', () => {
+        setNameFont(fontSelect.value);
+    });
+}
+
+// ===========================
 // Hero Blur Control
 // ===========================
 function setHeroBlur(value) {
@@ -264,7 +302,7 @@ if (contactForm) {
         try {
             const formData = new FormData(contactForm);
             formData.set('access_key', WEB3FORMS_ACCESS_KEY);
-            formData.set('subject', `Upit (${formData.get('name') || 'website'}): ${formData.get('subject') || ''}`);
+            formData.set('subject', `Upit (${formData.get('subject') || ''})`);
 
             const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
