@@ -464,6 +464,14 @@ body {
 }
 
 /* ===========================
+   Approach Section
+   (reuses .practice-grid / .practice-card for consistent theming)
+   =========================== */
+.approach-section {
+    background: var(--bg-light);
+}
+
+/* ===========================
    Location Section
    =========================== */
 .location-section {
