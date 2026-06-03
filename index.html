@@ -14,36 +14,50 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="#home" class="logo">
-                    <img class="logo-icon" src="img/logo/FullLogo_Transparent_NoBuffer.png" alt="Jurica Gaćina logo" decoding="async">
-                    <span class="logo-text">
-                        <span class="logo-role" data-i18n="site.role">Odvjetnik</span>
-                        <span class="logo-name">Jurica Gaćina</span>
-                    </span>
-                </a>
-                <div class="nav-right">
-                    <ul class="nav-links">
-                        <li><a href="#about" data-i18n="nav.about">O uredu</a></li>
-                        <li><a href="#practice" data-i18n="nav.practice">Područja prakse</a></li>
-                        <li><a href="#approach" data-i18n="nav.approach">Naš pristup</a></li>
-                        <li><a href="#location" data-i18n="nav.location">Lokacija</a></li>
-                        <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
-                    </ul>
-                    <div class="language-switcher">
-                        <button class="lang-btn active" data-lang="hr">HR</button>
-                        <button class="lang-btn" data-lang="en">EN</button>
-                        <button class="lang-btn" data-lang="it">IT</button>
-                        <button class="lang-btn" data-lang="de">DE</button>
+    <header class="site-header">
+        <nav class="navbar" id="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <a href="#home" class="logo">
+                        <img class="logo-icon" src="img/logo/FullLogo_Transparent_NoBuffer.png" alt="Jurica Gaćina logo" decoding="async">
+                        <span class="logo-text">
+                            <span class="logo-role" data-i18n="site.role">Odvjetnik</span>
+                            <span class="logo-name">Jurica Gaćina</span>
+                        </span>
+                    </a>
+                    <div class="nav-right">
+                        <ul class="nav-links">
+                            <li><a href="#about" data-i18n="nav.about">O uredu</a></li>
+                            <li><a href="#practice" data-i18n="nav.practice">Područja prakse</a></li>
+                            <li><a href="#approach" data-i18n="nav.approach">Naš pristup</a></li>
+                            <li><a href="#location" data-i18n="nav.location">Lokacija</a></li>
+                            <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+                        </ul>
+                        <div class="language-switcher">
+                            <button class="lang-btn active" data-lang="hr">HR</button>
+                            <button class="lang-btn" data-lang="en">EN</button>
+                            <button class="lang-btn" data-lang="it">IT</button>
+                            <button class="lang-btn" data-lang="de">DE</button>
+                        </div>
+                        <select id="language-select" class="language-select" aria-label="Select language">
+                            <option value="hr">HR</option>
+                            <option value="en">EN</option>
+                            <option value="it">IT</option>
+                            <option value="de">DE</option>
+                        </select>
+                        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
                     </div>
-                    <select id="language-select" class="language-select" aria-label="Select language">
-                        <option value="hr">HR</option>
-                        <option value="en">EN</option>
-                        <option value="it">IT</option>
-                        <option value="de">DE</option>
-                    </select>
+                </div>
+            </div>
+        </nav>
+        <!-- Design controls bar (visible only when presentation mode is off) -->
+        <div class="design-bar">
+            <div class="container">
+                <div class="design-bar-inner">
                     <div class="theme-switcher">
                         <select id="theme-select" class="theme-select" aria-label="Select design">
                             <option value="default">Classic</option>
@@ -77,15 +91,10 @@
                             aria-label="Hero image blur (0-100)"
                         >
                     </div>
-                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
                 </div>
             </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">

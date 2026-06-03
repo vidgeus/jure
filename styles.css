@@ -47,19 +47,38 @@ body {
 /* ===========================
    Navigation
    =========================== */
-.navbar {
+.site-header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1000;
+}
+
+.navbar {
     background: var(--bg-white);
     box-shadow: var(--shadow-sm);
-    z-index: 1000;
     transition: var(--transition);
 }
 
 .navbar.scrolled {
     box-shadow: var(--shadow-md);
+}
+
+/* Secondary bar holding the design controls; only shown when
+   presentation mode is off (see [data-presentation] rule below). */
+.design-bar {
+    background: var(--bg-light);
+    border-top: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.design-bar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    padding: 0.6rem 0;
 }
 
 .nav-content {
@@ -675,9 +694,7 @@ body {
 /* ===========================
    Presentation Mode (controls hidden, navbar split into thirds)
    =========================== */
-[data-presentation="true"] .theme-switcher,
-[data-presentation="true"] .blur-control,
-[data-presentation="true"] .font-control {
+[data-presentation="true"] .design-bar {
     display: none;
 }
 
@@ -749,12 +766,11 @@ body {
         display: flex;
     }
 
-    /* Hide niche design controls on mobile to keep language switcher visible.
-       The presentation toggle in the footer can still hide them on desktop. */
-    .theme-switcher,
-    .blur-control,
-    .font-control {
-        display: none;
+    /* Center and tighten the design controls so they fit a narrow screen. */
+    .design-bar-inner {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
     }
 
     /* Replace language buttons with a compact dropdown on mobile */

@@ -236,8 +236,21 @@ if (presentationToggle) {
 
     presentationToggle.addEventListener('change', () => {
         setPresentationMode(presentationToggle.checked);
+        syncDesignBarSpace();
     });
 }
+
+// The design bar lives in the fixed header. When it's visible, pad the body
+// by its actual rendered height so it never overlaps the hero — this stays
+// correct on mobile where the controls wrap onto multiple rows.
+const designBar = document.querySelector('.design-bar');
+function syncDesignBarSpace() {
+    if (!designBar) return;
+    const visible = getComputedStyle(designBar).display !== 'none';
+    document.body.style.paddingTop = visible ? `${designBar.offsetHeight}px` : '';
+}
+syncDesignBarSpace();
+window.addEventListener('resize', syncDesignBarSpace);
 
 const blurInput = document.getElementById('blur-input');
 if (blurInput) {
