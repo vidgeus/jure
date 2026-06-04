@@ -20,10 +20,7 @@ window.__translations = {
             "title": "O uredu",
             "subtitle": "Specijalizirani stručnjak za imovinsko pravo",
             "description1": "S višegodišnjim iskustvom u području imovinskog prava, nudimo sveobuhvatne pravne usluge prilagođene jedinstvenim potrebama svakog klijenta. Od savjetovanja o složenim ugovorima do zastupanja u sporovima, naša stručnost pokriva sve aspekte imovinskih pitanja.",
-            "description2": "Naša misija je pružiti jasne, djelotvorne i prilagođene pravne smjernice koje štite vaša prava i interese u svim aspektima imovinskog prava.",
-            "stat1": "Godina iskustva",
-            "stat2": "Uspješnih predmeta",
-            "stat3": "Predanost klijentima"
+            "description2": "Naša misija je pružiti jasne, djelotvorne i prilagođene pravne smjernice koje štite vaša prava i interese u svim aspektima imovinskog prava."
         },
         "practice": {
             "title": "Područja prakse",
@@ -126,10 +123,7 @@ window.__translations = {
             "title": "Our Office",
             "subtitle": "Specialized Property Law Expert",
             "description1": "With years of experience in property law, we offer comprehensive legal services tailored to each client's unique needs. From advising on complex contracts to representing in disputes, our expertise covers all aspects of property matters.",
-            "description2": "Our mission is to provide clear, effective, and tailored legal guidance that protects your rights and interests in all aspects of property law.",
-            "stat1": "Years of Experience",
-            "stat2": "Successful Cases",
-            "stat3": "Client Dedication"
+            "description2": "Our mission is to provide clear, effective, and tailored legal guidance that protects your rights and interests in all aspects of property law."
         },
         "practice": {
             "title": "Practice Areas",
@@ -232,10 +226,7 @@ window.__translations = {
             "title": "Lo Studio",
             "subtitle": "Esperti specializzati in diritto immobiliare",
             "description1": "Con anni di esperienza nel diritto immobiliare, offriamo servizi legali completi su misura per le esigenze uniche di ciascun cliente. Dalla consulenza su contratti complessi alla rappresentanza nelle controversie, la nostra competenza copre tutti gli aspetti delle questioni immobiliari.",
-            "description2": "La nostra missione è fornire una guida legale chiara, efficace e su misura che protegga i vostri diritti e interessi in tutti gli aspetti del diritto immobiliare.",
-            "stat1": "Anni di Esperienza",
-            "stat2": "Casi di Successo",
-            "stat3": "Dedizione al Cliente"
+            "description2": "La nostra missione è fornire una guida legale chiara, efficace e su misura che protegga i vostri diritti e interessi in tutti gli aspetti del diritto immobiliare."
         },
         "practice": {
             "title": "Aree di Pratica",
@@ -338,10 +329,7 @@ window.__translations = {
             "title": "Unsere Kanzlei",
             "subtitle": "Spezialisierter Experte für Immobilienrecht",
             "description1": "Mit langjähriger Erfahrung im Immobilienrecht bieten wir umfassende juristische Dienstleistungen, die auf die individuellen Bedürfnisse jedes Mandanten zugeschnitten sind. Von der Beratung bei komplexen Verträgen bis zur Vertretung in Streitigkeiten deckt unsere Expertise alle Aspekte des Immobilienrechts ab.",
-            "description2": "Unsere Mission ist es, klare, wirksame und maßgeschneiderte rechtliche Beratung zu bieten, die Ihre Rechte und Interessen in allen Aspekten des Immobilienrechts schützt.",
-            "stat1": "Jahre Erfahrung",
-            "stat2": "Erfolgreiche Fälle",
-            "stat3": "Engagement für Mandanten"
+            "description2": "Unsere Mission ist es, klare, wirksame und maßgeschneiderte rechtliche Beratung zu bieten, die Ihre Rechte und Interessen in allen Aspekten des Immobilienrechts schützt."
         },
         "practice": {
             "title": "Tätigkeitsbereiche",

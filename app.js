@@ -57,18 +57,13 @@ function getNestedTranslation(obj, path) {
 // Navigation
 // ===========================
 const navbar = document.getElementById('navbar');
-let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > 100) {
+    if (window.pageYOffset > 100) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-
-    lastScroll = currentScroll;
 });
 
 // Smooth scroll for navigation links
@@ -371,7 +366,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements for animation
-document.querySelectorAll('.practice-card, .stat-item, .info-item').forEach(el => {
+document.querySelectorAll('.practice-card, .info-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
