@@ -397,6 +397,12 @@ body {
     gap: 2rem;
 }
 
+/* Practice Areas has 4 cards — pin it to two columns so they render as a
+   balanced 2 x 2 grid instead of auto-fit's lopsided 3 + 1 at wide widths. */
+.practice-section .practice-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .practice-card {
     background: white;
     padding: 2.5rem 2rem;
@@ -622,7 +628,6 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 1rem;
     font-size: 0.85rem;
     cursor: pointer;
     user-select: none;
@@ -630,6 +635,16 @@ body {
 
 .presentation-toggle input[type="checkbox"] {
     cursor: pointer;
+}
+
+/* Sits as its own strip directly below the footer; matches the footer's dark
+   palette so it reads correctly in every theme. */
+.design-toggle-bar {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 /* ===========================
@@ -782,7 +797,8 @@ body {
         padding: 2rem 1.5rem;
     }
 
-    .practice-grid {
+    .practice-grid,
+    .practice-section .practice-grid {
         grid-template-columns: 1fr;
     }
 }
