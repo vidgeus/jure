@@ -754,6 +754,16 @@ body {
         gap: 1rem;
     }
 
+    /* Presentation mode lays the navbar out as a 3-column grid (logo | links |
+       language) for desktop. On mobile the links and language buttons collapse
+       into the hamburger + dropdown, so revert to the normal flex layout: logo
+       on the left, the dropdown and hamburger grouped flush against the right
+       edge (and the dropdown sized to its content rather than stretched). */
+    [data-presentation="true"] .nav-content,
+    [data-presentation="true"] .nav-right {
+        display: flex;
+    }
+
     /* Animate hamburger into X when active */
     .mobile-menu-toggle.active span:nth-child(1) {
         transform: translateY(7px) rotate(45deg);
