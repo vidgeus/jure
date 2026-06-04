@@ -466,11 +466,6 @@ body {
     border-top-color: var(--accent-color);
 }
 
-.practice-icon {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-}
-
 .practice-card h3 {
     font-size: 1.3rem;
     color: var(--primary-color);
