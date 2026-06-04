@@ -415,33 +415,6 @@ body {
     line-height: 1.8;
 }
 
-.about-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.stat-item {
-    text-align: center;
-    padding: 2rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: var(--shadow-sm);
-}
-
-.stat-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--accent-color);
-    margin-bottom: 0.5rem;
-}
-
-.stat-label {
-    color: var(--text-light);
-    font-size: 0.95rem;
-}
-
 /* ===========================
    Practice Areas Section
    =========================== */
@@ -824,10 +797,6 @@ body {
 
     .contact-form {
         padding: 2rem 1.5rem;
-    }
-
-    .about-stats {
-        grid-template-columns: 1fr;
     }
 
     .practice-grid {
