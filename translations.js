@@ -6,7 +6,6 @@ window.__translations = {
             "role": "Odvjetnik"
         },
         "nav": {
-            "about": "O uredu",
             "practice": "Područja prakse",
             "approach": "Naš pristup",
             "location": "Lokacija",
@@ -16,31 +15,9 @@ window.__translations = {
             "title": "Odvjetnik",
             "cta": "Kontaktirajte nas"
         },
-        "about": {
-            "title": "O uredu",
-            "subtitle": "Specijalizirani stručnjak za imovinsko pravo",
-            "description1": "S višegodišnjim iskustvom u području imovinskog prava, nudimo sveobuhvatne pravne usluge prilagođene jedinstvenim potrebama svakog klijenta. Od savjetovanja o složenim ugovorima do zastupanja u sporovima, naša stručnost pokriva sve aspekte imovinskih pitanja.",
-            "description2": "Naša misija je pružiti jasne, djelotvorne i prilagođene pravne smjernice koje štite vaša prava i interese u svim aspektima imovinskog prava."
-        },
         "practice": {
             "title": "Područja prakse",
             "subtitle": "Specijalizirani za sve aspekte imovinskog prava",
-            "area1": {
-                "title": "Ugovori o kupoprodaji nekretnina",
-                "description": "Savjetovanje i priprema svih vrsta ugovora vezanih uz kupnju i prodaju nekretnina, osiguravajući pravnu sigurnost i zaštitu vaših interesa."
-            },
-            "area2": {
-                "title": "Imovinski sporovi",
-                "description": "Zastupanje u sudskim i vansudskim postupcima rješavanja imovinskih sporova, uključujući granične sporove, vlasničke odnose i druga pitanja."
-            },
-            "area3": {
-                "title": "Nasljeđivanje nekretnina",
-                "description": "Kompleksno savjetovanje u postupcima nasljeđivanja, uključujući ostavinske postupke, prijenos vlasništva i rješavanje nasljednih sporova."
-            },
-            "area4": {
-                "title": "Ugovori i zakup",
-                "description": "Izrada i pregled ugovora o zakupu, najmu, predugovora i drugih pravnih akata vezanih uz korištenje i upravljanje nekretninama."
-            },
             "area5": {
                 "title": "Obvezno pravo",
                 "description": "Odvjetnički ured pruža pravnu pomoć i savjetovanje u području obveznog prava, uključujući sastavljanje i analizu ugovora, zaštitu prava ugovornih strana, naplatu potraživanja, naknadu štete te zastupanje u sudskim i izvansudskim postupcima."
@@ -95,8 +72,6 @@ window.__translations = {
             }
         },
         "footer": {
-            "description": "Stručnost u imovinskom pravu s višegodišnjim iskustvom u pružanju pravnih usluga.",
-            "links": "Korisne poveznice",
             "copyright": "Sva prava pridržana"
         },
         "presentation": {
@@ -109,7 +84,6 @@ window.__translations = {
             "role": "Attorney"
         },
         "nav": {
-            "about": "Our Office",
             "practice": "Practice Areas",
             "approach": "Our Approach",
             "location": "Location",
@@ -119,31 +93,9 @@ window.__translations = {
             "title": "Attorney",
             "cta": "Contact Us"
         },
-        "about": {
-            "title": "Our Office",
-            "subtitle": "Specialized Property Law Expert",
-            "description1": "With years of experience in property law, we offer comprehensive legal services tailored to each client's unique needs. From advising on complex contracts to representing in disputes, our expertise covers all aspects of property matters.",
-            "description2": "Our mission is to provide clear, effective, and tailored legal guidance that protects your rights and interests in all aspects of property law."
-        },
         "practice": {
             "title": "Practice Areas",
             "subtitle": "Specialized in all aspects of property law",
-            "area1": {
-                "title": "Real Estate Purchase Agreements",
-                "description": "Advising and preparing all types of contracts related to buying and selling real estate, ensuring legal security and protection of your interests."
-            },
-            "area2": {
-                "title": "Property Disputes",
-                "description": "Representation in judicial and extrajudicial property dispute resolution proceedings, including boundary disputes, ownership relations, and other matters."
-            },
-            "area3": {
-                "title": "Property Inheritance",
-                "description": "Comprehensive advice in inheritance proceedings, including probate procedures, property transfer, and resolution of inheritance disputes."
-            },
-            "area4": {
-                "title": "Contracts and Leases",
-                "description": "Drafting and reviewing lease agreements, rental contracts, preliminary agreements, and other legal documents related to property use and management."
-            },
             "area5": {
                 "title": "Law of Obligations",
                 "description": "Our office provides legal assistance and advice in the field of the law of obligations, including drafting and reviewing contracts, protecting the rights of contracting parties, debt collection, damage compensation, and representation in judicial and extrajudicial proceedings."
@@ -198,8 +150,6 @@ window.__translations = {
             }
         },
         "footer": {
-            "description": "Property law expertise with years of experience in providing legal services.",
-            "links": "Useful Links",
             "copyright": "All rights reserved"
         },
         "presentation": {
@@ -212,7 +162,6 @@ window.__translations = {
             "role": "Avvocato"
         },
         "nav": {
-            "about": "Lo Studio",
             "practice": "Aree di Pratica",
             "approach": "Il Nostro Approccio",
             "location": "Posizione",
@@ -222,31 +171,9 @@ window.__translations = {
             "title": "Avvocato",
             "cta": "Contattaci"
         },
-        "about": {
-            "title": "Lo Studio",
-            "subtitle": "Esperti specializzati in diritto immobiliare",
-            "description1": "Con anni di esperienza nel diritto immobiliare, offriamo servizi legali completi su misura per le esigenze uniche di ciascun cliente. Dalla consulenza su contratti complessi alla rappresentanza nelle controversie, la nostra competenza copre tutti gli aspetti delle questioni immobiliari.",
-            "description2": "La nostra missione è fornire una guida legale chiara, efficace e su misura che protegga i vostri diritti e interessi in tutti gli aspetti del diritto immobiliare."
-        },
         "practice": {
             "title": "Aree di Pratica",
             "subtitle": "Specializzati in tutti gli aspetti del diritto immobiliare",
-            "area1": {
-                "title": "Contratti di Compravendita Immobiliare",
-                "description": "Consulenza e preparazione di tutti i tipi di contratti relativi all'acquisto e alla vendita di immobili, garantendo sicurezza giuridica e tutela dei vostri interessi."
-            },
-            "area2": {
-                "title": "Controversie Immobiliari",
-                "description": "Rappresentanza in procedimenti giudiziali ed extragiudiziali per la risoluzione di controversie immobiliari, comprese controversie di confine, rapporti di proprietà e altre questioni."
-            },
-            "area3": {
-                "title": "Successioni Immobiliari",
-                "description": "Consulenza completa nei procedimenti successori, comprese le procedure di successione, il trasferimento di proprietà e la risoluzione di controversie ereditarie."
-            },
-            "area4": {
-                "title": "Contratti e Locazioni",
-                "description": "Redazione e revisione di contratti di locazione, contratti di affitto, accordi preliminari e altri documenti legali relativi all'uso e alla gestione degli immobili."
-            },
             "area5": {
                 "title": "Diritto delle Obbligazioni",
                 "description": "Lo studio legale fornisce assistenza e consulenza legale nell'ambito del diritto delle obbligazioni, inclusa la redazione e l'analisi dei contratti, la tutela dei diritti delle parti contraenti, il recupero crediti, il risarcimento dei danni e la rappresentanza nei procedimenti giudiziali ed extragiudiziali."
@@ -301,8 +228,6 @@ window.__translations = {
             }
         },
         "footer": {
-            "description": "Competenza nel diritto immobiliare con anni di esperienza nella prestazione di servizi legali.",
-            "links": "Link Utili",
             "copyright": "Tutti i diritti riservati"
         },
         "presentation": {
@@ -315,7 +240,6 @@ window.__translations = {
             "role": "Rechtsanwalt"
         },
         "nav": {
-            "about": "Unsere Kanzlei",
             "practice": "Tätigkeitsbereiche",
             "approach": "Unser Ansatz",
             "location": "Standort",
@@ -325,31 +249,9 @@ window.__translations = {
             "title": "Rechtsanwalt",
             "cta": "Kontaktieren Sie uns"
         },
-        "about": {
-            "title": "Unsere Kanzlei",
-            "subtitle": "Spezialisierter Experte für Immobilienrecht",
-            "description1": "Mit langjähriger Erfahrung im Immobilienrecht bieten wir umfassende juristische Dienstleistungen, die auf die individuellen Bedürfnisse jedes Mandanten zugeschnitten sind. Von der Beratung bei komplexen Verträgen bis zur Vertretung in Streitigkeiten deckt unsere Expertise alle Aspekte des Immobilienrechts ab.",
-            "description2": "Unsere Mission ist es, klare, wirksame und maßgeschneiderte rechtliche Beratung zu bieten, die Ihre Rechte und Interessen in allen Aspekten des Immobilienrechts schützt."
-        },
         "practice": {
             "title": "Tätigkeitsbereiche",
             "subtitle": "Spezialisiert auf alle Aspekte des Immobilienrechts",
-            "area1": {
-                "title": "Immobilienkaufverträge",
-                "description": "Beratung und Erstellung aller Arten von Verträgen im Zusammenhang mit dem Kauf und Verkauf von Immobilien, um Rechtssicherheit und den Schutz Ihrer Interessen zu gewährleisten."
-            },
-            "area2": {
-                "title": "Immobilienstreitigkeiten",
-                "description": "Vertretung in gerichtlichen und außergerichtlichen Verfahren zur Beilegung von Immobilienstreitigkeiten, einschließlich Grenzstreitigkeiten, Eigentumsverhältnissen und anderen Angelegenheiten."
-            },
-            "area3": {
-                "title": "Immobilienerbschaft",
-                "description": "Umfassende Beratung in Erbschaftsverfahren, einschließlich Nachlassverfahren, Eigentumsübertragung und Beilegung von Erbstreitigkeiten."
-            },
-            "area4": {
-                "title": "Verträge und Pacht",
-                "description": "Erstellung und Prüfung von Pacht-, Mietverträgen, Vorverträgen und anderen Rechtsdokumenten im Zusammenhang mit der Nutzung und Verwaltung von Immobilien."
-            },
             "area5": {
                 "title": "Schuldrecht",
                 "description": "Die Kanzlei bietet Rechtsbeistand und Beratung im Bereich des Schuldrechts, einschließlich der Erstellung und Prüfung von Verträgen, des Schutzes der Rechte der Vertragsparteien, des Forderungseinzugs, des Schadensersatzes sowie der Vertretung in gerichtlichen und außergerichtlichen Verfahren."
@@ -404,8 +306,6 @@ window.__translations = {
             }
         },
         "footer": {
-            "description": "Expertise im Immobilienrecht mit langjähriger Erfahrung in der Erbringung juristischer Dienstleistungen.",
-            "links": "Nützliche Links",
             "copyright": "Alle Rechte vorbehalten"
         },
         "presentation": {

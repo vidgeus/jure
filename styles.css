@@ -128,8 +128,7 @@ body {
     font-family: var(--name-font, inherit);
 }
 
-.hero-name,
-.footer-name {
+.hero-name {
     text-transform: uppercase;
     letter-spacing: 0.04em;
 }
@@ -387,32 +386,6 @@ body {
     color: var(--text-light);
     max-width: 600px;
     margin: 0 auto;
-}
-
-/* ===========================
-   About Section
-   =========================== */
-.about-section {
-    background: var(--bg-light);
-}
-
-.about-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-}
-
-.about-text h3 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-}
-
-.about-text p {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
 }
 
 /* ===========================
@@ -1179,12 +1152,10 @@ body {
    =========================== */
 [data-theme="batman"] .logo,
 [data-theme="batman"] .section-header h2,
-[data-theme="batman"] .about-text h3,
 [data-theme="batman"] .practice-card h3,
 [data-theme="batman"] .info-item h3,
 [data-theme="midnight"] .logo,
 [data-theme="midnight"] .section-header h2,
-[data-theme="midnight"] .about-text h3,
 [data-theme="midnight"] .practice-card h3,
 [data-theme="midnight"] .info-item h3 {
     color: var(--text-dark);
