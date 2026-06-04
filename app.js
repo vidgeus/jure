@@ -140,7 +140,7 @@ const themeSelect = document.getElementById('theme-select');
 if (themeSelect) {
     const savedTheme = (() => {
         try { return localStorage.getItem('site-theme'); } catch (e) { return null; }
-    })() || 'marble';
+    })() || 'midnight';
     themeSelect.value = savedTheme;
     setTheme(savedTheme);
 
@@ -178,7 +178,7 @@ const fontSelect = document.getElementById('font-select');
 if (fontSelect) {
     const savedFont = (() => {
         try { return localStorage.getItem('name-font'); } catch (e) { return null; }
-    })() || 'default';
+    })() || 'playfair';
     fontSelect.value = savedFont;
     setNameFont(savedFont);
 
