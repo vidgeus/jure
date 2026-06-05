@@ -321,7 +321,15 @@ body {
     max-width: 800px;
 }
 
+/* The hero heading wraps the role + name in a single <h1> for SEO; the inner
+   spans keep their original block layout. */
+.hero-heading {
+    margin: 0;
+    font-weight: inherit;
+}
+
 .hero-title {
+    display: block;
     font-size: clamp(1.4rem, 3.15vw, 2.1rem);
     font-weight: 400;
     margin-bottom: 0.5rem;
@@ -332,6 +340,7 @@ body {
 }
 
 .hero-name {
+    display: block;
     font-size: clamp(2.5rem, 6.5vw, 4.25rem);
     font-weight: 700;
     margin-bottom: 2rem;
