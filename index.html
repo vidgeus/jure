@@ -7,10 +7,37 @@
     <meta name="description" content="Specijalizirani odvjetnički ured za imovinsko pravo, ugovore, nasljeđivanje i sporove.">
     <link rel="icon" type="image/png" href="img/logo/FullLogo_Transparent_NoBuffer.png">
     <link rel="apple-touch-icon" href="img/logo/FullLogo_Transparent_NoBuffer.png">
+    <!-- Preload the self-hosted default name font so the name renders in Playfair
+         on first paint (no fallback-to-Playfair swap). -->
+    <link rel="preload" as="font" type="font/woff2" href="fonts/playfair-display-700-latin.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/playfair-display-700-latin-ext.woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@400;500;700&family=EB+Garamond:wght@400;500;600;700&family=Josefin+Slab:wght@400;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@400;500;700&family=EB+Garamond:wght@400;500;600;700&family=Josefin+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        /* Apply saved display settings before first paint so the page never
+           flashes the default theme/font. Defaults mirror app.js — keep in sync. */
+        (function () {
+            try {
+                var ls = window.localStorage;
+                var theme = (ls && ls.getItem('site-theme')) || 'midnight';
+                if (theme !== 'default') document.documentElement.setAttribute('data-theme', theme);
+                var fonts = {
+                    'josefin-slab': "'Josefin Slab', serif",
+                    'eb-garamond': "'EB Garamond', serif",
+                    'playfair': "'Playfair Display', serif",
+                    'cinzel': "'Cinzel', serif"
+                };
+                var font = (ls && ls.getItem('name-font')) || 'playfair';
+                if (fonts[font]) document.documentElement.style.setProperty('--name-font', fonts[font]);
+                var blur = ls && ls.getItem('hero-blur');
+                if (blur) document.documentElement.style.setProperty('--hero-blur', Math.max(0, Math.min(100, Number(blur) || 0)) + 'px');
+                var pres = ls ? ls.getItem('presentation-mode') : null;
+                if (pres === null || pres === 'true') document.documentElement.setAttribute('data-presentation', 'true');
+            } catch (e) {}
+        })();
+    </script>
 </head>
 <body>
     <!-- Navigation -->
