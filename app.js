@@ -59,14 +59,60 @@ if (mobileMenuToggle && navLinks) {
 // ===========================
 // Language Switcher
 // ===========================
-// Desktop buttons are plain links to each language's URL. The mobile dropdown
-// stores the target URL as its option value and navigates on change.
+// Each language is its own URL, so switching is a full navigation. To keep the
+// reader in place instead of jumping to the top, we remember the section in
+// view (and how far we've scrolled into it) before leaving, then restore it on
+// the next page. Using a section anchor + offset keeps the position accurate
+// even though translated content has slightly different heights.
+const LANG_SCROLL_KEY = 'lang-switch-scroll';
+
+function rememberScrollBeforeLanguageSwitch() {
+    try {
+        const y = window.scrollY;
+        let anchor = null;
+        document.querySelectorAll('section[id]').forEach(sec => {
+            if (sec.offsetTop <= y + 2) anchor = sec;
+        });
+        const data = anchor ? { id: anchor.id, delta: y - anchor.offsetTop } : { y };
+        sessionStorage.setItem(LANG_SCROLL_KEY, JSON.stringify(data));
+    } catch (e) { /* sessionStorage unavailable; ignore */ }
+}
+
+// Desktop renders the languages as <a> links; the mobile dropdown navigates on change.
+document.querySelectorAll('.lang-btn').forEach(link => {
+    link.addEventListener('click', rememberScrollBeforeLanguageSwitch);
+});
+
 const languageSelect = document.getElementById('language-select');
 if (languageSelect) {
     languageSelect.addEventListener('change', () => {
+        rememberScrollBeforeLanguageSwitch();
         window.location.href = languageSelect.value;
     });
 }
+
+// Restore the remembered position once, after a language switch.
+(function restoreScrollAfterLanguageSwitch() {
+    let data;
+    try {
+        const raw = sessionStorage.getItem(LANG_SCROLL_KEY);
+        if (!raw) return;
+        sessionStorage.removeItem(LANG_SCROLL_KEY);
+        data = JSON.parse(raw);
+    } catch (e) { return; }
+    if (!data) return;
+
+    const apply = () => {
+        if (data.id) {
+            const sec = document.getElementById(data.id);
+            if (sec) { window.scrollTo(0, sec.offsetTop + (data.delta || 0)); return; }
+        }
+        if (typeof data.y === 'number') window.scrollTo(0, data.y);
+    };
+    apply();
+    // Re-apply after load in case fonts/images settle the layout height.
+    window.addEventListener('load', apply, { once: true });
+})();
 
 // ===========================
 // Theme Switcher
