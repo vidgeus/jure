@@ -59,7 +59,6 @@ window.__translations = {
             "title": "Naša lokacija",
             "subtitle": "Posjetite nas u našem uredu",
             "address": { "title": "Adresa" },
-            "hours": { "title": "Radno vrijeme" },
             "contact": { "title": "Kontakt" }
         },
         "contact": {
@@ -141,7 +140,6 @@ window.__translations = {
             "title": "Our Location",
             "subtitle": "Visit us at our office",
             "address": { "title": "Address" },
-            "hours": { "title": "Office Hours" },
             "contact": { "title": "Contact" }
         },
         "contact": {
@@ -223,7 +221,6 @@ window.__translations = {
             "title": "La Nostra Sede",
             "subtitle": "Visitateci nel nostro studio",
             "address": { "title": "Indirizzo" },
-            "hours": { "title": "Orari di Apertura" },
             "contact": { "title": "Contatti" }
         },
         "contact": {
@@ -305,7 +302,6 @@ window.__translations = {
             "title": "Unser Standort",
             "subtitle": "Besuchen Sie uns in unserer Kanzlei",
             "address": { "title": "Adresse" },
-            "hours": { "title": "Öffnungszeiten" },
             "contact": { "title": "Kontakt" }
         },
         "contact": {
