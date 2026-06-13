@@ -59,6 +59,8 @@ window.__translations = {
             "title": "Naša lokacija",
             "subtitle": "Posjetite nas u našem uredu",
             "country": "Hrvatska",
+            "city": "Poreč",
+            "mapLink": "Otvori lokaciju u Google Mapama",
             "address": { "title": "Adresa" },
             "contact": { "title": "Kontakt" }
         },
@@ -141,6 +143,8 @@ window.__translations = {
             "title": "Our Location",
             "subtitle": "Visit us at our office",
             "country": "Croatia",
+            "city": "Poreč",
+            "mapLink": "Open location in Google Maps",
             "address": { "title": "Address" },
             "contact": { "title": "Contact" }
         },
@@ -223,6 +227,8 @@ window.__translations = {
             "title": "La Nostra Sede",
             "subtitle": "Visitateci nel nostro studio",
             "country": "Croazia",
+            "city": "Parenzo",
+            "mapLink": "Apri la posizione in Google Maps",
             "address": { "title": "Indirizzo" },
             "contact": { "title": "Contatti" }
         },
@@ -305,6 +311,8 @@ window.__translations = {
             "title": "Unser Standort",
             "subtitle": "Besuchen Sie uns in unserer Kanzlei",
             "country": "Kroatien",
+            "city": "Poreč",
+            "mapLink": "Standort in Google Maps öffnen",
             "address": { "title": "Adresse" },
             "contact": { "title": "Kontakt" }
         },

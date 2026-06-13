@@ -514,12 +514,23 @@ body {
     line-height: 1.8;
 }
 
+.info-item a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.info-item a:hover {
+    color: var(--accent-color);
+}
+
 .location-map {
     position: sticky;
     top: 100px;
 }
 
 .map-placeholder {
+    position: relative;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: var(--shadow-md);
@@ -527,6 +538,27 @@ body {
 
 .map-placeholder iframe {
     display: block;
+    pointer-events: none;
+}
+
+/* Transparent overlay turns the (non-interactive) map into one link that opens
+   Google Maps; the iframe underneath can't be dragged, zoomed or focused. */
+.map-overlay {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 /* ===========================
