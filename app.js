@@ -1,57 +1,10 @@
 // ===========================
-// Localization System
+// Localization
 // ===========================
-let currentLang = 'hr';
-let translations = {};
-
-// Load translations from translations.js (loaded via <script> so this works
-// when the site is opened directly via file:// — fetch() of local files is
-// blocked by browsers in that case).
-function loadTranslations() {
-    if (!window.__translations) {
-        console.error('Translations missing: ensure translations.js is loaded before app.js');
-        return;
-    }
-    translations = window.__translations;
-    setLanguage(currentLang);
-}
-
-// Set language and update content
-function setLanguage(lang) {
-    currentLang = lang;
-    document.documentElement.lang = lang;
-
-    // Update all elements with data-i18n attribute
-    const elements = document.querySelectorAll('[data-i18n]');
-    elements.forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        const translation = getNestedTranslation(translations[lang], key);
-
-        if (translation) {
-            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                element.placeholder = translation;
-            } else {
-                element.textContent = translation;
-            }
-        }
-    });
-
-    // Update language buttons
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
-    });
-
-    // Keep mobile language dropdown in sync
-    const languageSelect = document.getElementById('language-select');
-    if (languageSelect && languageSelect.value !== lang) {
-        languageSelect.value = lang;
-    }
-}
-
-// Helper function to get nested translation
-function getNestedTranslation(obj, path) {
-    return path.split('.').reduce((current, key) => current?.[key], obj);
-}
+// Each language is its own pre-rendered page (/, /en/, /it/, /de/) produced by
+// build.js, so translation no longer happens at runtime. We only read the
+// active language (from <html lang>) for the localized contact-form messages.
+const currentLang = (document.documentElement.lang || 'hr').slice(0, 2).toLowerCase();
 
 // ===========================
 // Navigation
@@ -106,17 +59,12 @@ if (mobileMenuToggle && navLinks) {
 // ===========================
 // Language Switcher
 // ===========================
-document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const lang = btn.dataset.lang;
-        setLanguage(lang);
-    });
-});
-
+// Desktop buttons are plain links to each language's URL. The mobile dropdown
+// stores the target URL as its option value and navigates on change.
 const languageSelect = document.getElementById('language-select');
 if (languageSelect) {
     languageSelect.addEventListener('change', () => {
-        setLanguage(languageSelect.value);
+        window.location.href = languageSelect.value;
     });
 }
 
@@ -344,7 +292,6 @@ if (contactForm) {
 // Initialization
 // ===========================
 document.addEventListener('DOMContentLoaded', () => {
-    loadTranslations();
     document.getElementById('current-year').textContent = new Date().getFullYear();
 });
 

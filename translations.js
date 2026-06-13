@@ -5,6 +5,10 @@ window.__translations = {
         "site": {
             "role": "Odvjetnik"
         },
+        "seo": {
+            "title": "Odvjetnik Jurica Gaćina | Imovinsko pravo, Zagreb",
+            "description": "Odvjetnički ured Jurica Gaćina u Zagrebu specijaliziran za imovinsko pravo: kupoprodaja nekretnina, nasljeđivanje, ugovori, stvarno pravo i pravni sporovi."
+        },
         "nav": {
             "practice": "Područja prakse",
             "approach": "Naš pristup",
@@ -82,6 +86,10 @@ window.__translations = {
     en: {
         "site": {
             "role": "Attorney"
+        },
+        "seo": {
+            "title": "Jurica Gaćina, Attorney | Property Law in Zagreb",
+            "description": "Law office of Jurica Gaćina in Zagreb specialised in property law: real-estate transactions, inheritance, contracts and legal disputes."
         },
         "nav": {
             "practice": "Practice Areas",
@@ -161,6 +169,10 @@ window.__translations = {
         "site": {
             "role": "Avvocato"
         },
+        "seo": {
+            "title": "Avvocato Jurica Gaćina | Diritto immobiliare, Zagabria",
+            "description": "Studio legale Jurica Gaćina a Zagabria, specializzato in diritto immobiliare: compravendite, successioni, contratti e controversie legali."
+        },
         "nav": {
             "practice": "Aree di Pratica",
             "approach": "Il Nostro Approccio",
@@ -238,6 +250,10 @@ window.__translations = {
     de: {
         "site": {
             "role": "Rechtsanwalt"
+        },
+        "seo": {
+            "title": "Rechtsanwalt Jurica Gaćina | Immobilienrecht, Zagreb",
+            "description": "Anwaltskanzlei Jurica Gaćina in Zagreb, spezialisiert auf Immobilienrecht: Immobilienkauf, Erbschaft, Verträge und Rechtsstreitigkeiten."
         },
         "nav": {
             "practice": "Tätigkeitsbereiche",
