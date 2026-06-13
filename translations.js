@@ -6,8 +6,8 @@ window.__translations = {
             "role": "Odvjetnik"
         },
         "seo": {
-            "title": "Odvjetnik Jurica Gaćina | Imovinsko pravo, Zagreb",
-            "description": "Odvjetnički ured Jurica Gaćina u Zagrebu specijaliziran za imovinsko pravo: kupoprodaja nekretnina, nasljeđivanje, ugovori, stvarno pravo i pravni sporovi."
+            "title": "Odvjetnik Jurica Gaćina | Imovinsko pravo, Poreč",
+            "description": "Odvjetnički ured Jurica Gaćina u Poreču specijaliziran za imovinsko pravo: kupoprodaja nekretnina, nasljeđivanje, ugovori, stvarno pravo i pravni sporovi."
         },
         "nav": {
             "practice": "Područja prakse",
@@ -58,6 +58,7 @@ window.__translations = {
         "location": {
             "title": "Naša lokacija",
             "subtitle": "Posjetite nas u našem uredu",
+            "country": "Hrvatska",
             "address": { "title": "Adresa" },
             "contact": { "title": "Kontakt" }
         },
@@ -87,8 +88,8 @@ window.__translations = {
             "role": "Attorney"
         },
         "seo": {
-            "title": "Jurica Gaćina, Attorney | Property Law in Zagreb",
-            "description": "Law office of Jurica Gaćina in Zagreb specialised in property law: real-estate transactions, inheritance, contracts and legal disputes."
+            "title": "Jurica Gaćina, Attorney | Property Law in Poreč",
+            "description": "Law office of Jurica Gaćina in Poreč specialised in property law: real-estate transactions, inheritance, contracts and legal disputes."
         },
         "nav": {
             "practice": "Practice Areas",
@@ -139,6 +140,7 @@ window.__translations = {
         "location": {
             "title": "Our Location",
             "subtitle": "Visit us at our office",
+            "country": "Croatia",
             "address": { "title": "Address" },
             "contact": { "title": "Contact" }
         },
@@ -168,8 +170,8 @@ window.__translations = {
             "role": "Avvocato"
         },
         "seo": {
-            "title": "Avvocato Jurica Gaćina | Diritto immobiliare, Zagabria",
-            "description": "Studio legale Jurica Gaćina a Zagabria, specializzato in diritto immobiliare: compravendite, successioni, contratti e controversie legali."
+            "title": "Avvocato Jurica Gaćina | Diritto immobiliare, Parenzo",
+            "description": "Studio legale Jurica Gaćina a Parenzo (Poreč), specializzato in diritto immobiliare: compravendite, successioni, contratti e controversie legali."
         },
         "nav": {
             "practice": "Aree di Pratica",
@@ -220,6 +222,7 @@ window.__translations = {
         "location": {
             "title": "La Nostra Sede",
             "subtitle": "Visitateci nel nostro studio",
+            "country": "Croazia",
             "address": { "title": "Indirizzo" },
             "contact": { "title": "Contatti" }
         },
@@ -249,8 +252,8 @@ window.__translations = {
             "role": "Rechtsanwalt"
         },
         "seo": {
-            "title": "Rechtsanwalt Jurica Gaćina | Immobilienrecht, Zagreb",
-            "description": "Anwaltskanzlei Jurica Gaćina in Zagreb, spezialisiert auf Immobilienrecht: Immobilienkauf, Erbschaft, Verträge und Rechtsstreitigkeiten."
+            "title": "Rechtsanwalt Jurica Gaćina | Immobilienrecht, Poreč",
+            "description": "Anwaltskanzlei Jurica Gaćina in Poreč, spezialisiert auf Immobilienrecht: Immobilienkauf, Erbschaft, Verträge und Rechtsstreitigkeiten."
         },
         "nav": {
             "practice": "Tätigkeitsbereiche",
@@ -301,6 +304,7 @@ window.__translations = {
         "location": {
             "title": "Unser Standort",
             "subtitle": "Besuchen Sie uns in unserer Kanzlei",
+            "country": "Kroatien",
             "address": { "title": "Adresse" },
             "contact": { "title": "Kontakt" }
         },
