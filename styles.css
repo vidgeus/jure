@@ -247,6 +247,13 @@ body {
     outline: none;
 }
 
+/* The native options popup defaults to a white system background; pin theme
+   colors so the letters stay readable (otherwise light text on white). */
+.language-select option {
+    background: var(--bg-white);
+    color: var(--text-dark);
+}
+
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -724,6 +731,10 @@ body {
         top: 100%;
         left: 0;
         right: 0;
+        /* Override presentation mode's justify-self:center, which would shrink
+           and center this absolutely-positioned panel in the header. Stretch it
+           to the full header width so it drops straight down under the bar. */
+        justify-self: stretch;
         background: var(--bg-white);
         padding: 0.5rem 0;
         gap: 0;
