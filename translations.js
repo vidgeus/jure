@@ -62,6 +62,12 @@ window.__translations = {
             "city": "Poreč",
             "mapLink": "Otvori lokaciju u Google Mapama",
             "address": { "title": "Adresa" },
+            "hours": {
+                "title": "Radno vrijeme",
+                "weekdays": "Ponedjeljak - Petak: 09:00 - 17:00",
+                "saturday": "Subota: Po dogovoru",
+                "sunday": "Nedjelja: Zatvoreno"
+            },
             "contact": { "title": "Kontakt" }
         },
         "contact": {
@@ -146,6 +152,12 @@ window.__translations = {
             "city": "Poreč",
             "mapLink": "Open location in Google Maps",
             "address": { "title": "Address" },
+            "hours": {
+                "title": "Office Hours",
+                "weekdays": "Monday - Friday: 09:00 - 17:00",
+                "saturday": "Saturday: By appointment",
+                "sunday": "Sunday: Closed"
+            },
             "contact": { "title": "Contact" }
         },
         "contact": {
@@ -230,6 +242,12 @@ window.__translations = {
             "city": "Parenzo",
             "mapLink": "Apri la posizione in Google Maps",
             "address": { "title": "Indirizzo" },
+            "hours": {
+                "title": "Orari di Apertura",
+                "weekdays": "Lunedì - Venerdì: 09:00 - 17:00",
+                "saturday": "Sabato: Su appuntamento",
+                "sunday": "Domenica: Chiuso"
+            },
             "contact": { "title": "Contatti" }
         },
         "contact": {
@@ -314,6 +332,12 @@ window.__translations = {
             "city": "Poreč",
             "mapLink": "Standort in Google Maps öffnen",
             "address": { "title": "Adresse" },
+            "hours": {
+                "title": "Öffnungszeiten",
+                "weekdays": "Montag - Freitag: 09:00 - 17:00",
+                "saturday": "Samstag: Nach Vereinbarung",
+                "sunday": "Sonntag: Geschlossen"
+            },
             "contact": { "title": "Kontakt" }
         },
         "contact": {

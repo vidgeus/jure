@@ -121,7 +121,15 @@
       "areaServed": {
         "@type": "Country",
         "name": "Hrvatska"
-      }
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ]
     }
     </script>
 </head>
@@ -320,6 +328,14 @@
                         <p id="office-address">
                             Mate Vlašića 20<br>
                             52440 <span data-i18n="location.city">Poreč</span>, <span data-i18n="location.country">Hrvatska</span>
+                        </p>
+                    </div>
+                    <div class="info-item">
+                        <h3 data-i18n="location.hours.title">Radno vrijeme</h3>
+                        <p id="office-hours">
+                            <span data-i18n="location.hours.weekdays">Ponedjeljak - Petak: 09:00 - 17:00</span><br>
+                            <span data-i18n="location.hours.saturday">Subota: Po dogovoru</span><br>
+                            <span data-i18n="location.hours.sunday">Nedjelja: Zatvoreno</span>
                         </p>
                     </div>
                     <div class="info-item">
