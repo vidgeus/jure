@@ -64,8 +64,8 @@ window.__translations = {
             "address": { "title": "Adresa" },
             "hours": {
                 "title": "Radno vrijeme",
-                "weekdays": "Ponedjeljak - Petak: 09:00 - 17:00",
-                "saturday": "Subota: Po dogovoru",
+                "weekdays": "Ponedjeljak - Petak: 08:00 - 17:00",
+                "saturday": "Subota: 08:00 - 12:00",
                 "sunday": "Nedjelja: Zatvoreno"
             },
             "contact": { "title": "Kontakt" }
@@ -154,8 +154,8 @@ window.__translations = {
             "address": { "title": "Address" },
             "hours": {
                 "title": "Office Hours",
-                "weekdays": "Monday - Friday: 09:00 - 17:00",
-                "saturday": "Saturday: By appointment",
+                "weekdays": "Monday - Friday: 08:00 - 17:00",
+                "saturday": "Saturday: 08:00 - 12:00",
                 "sunday": "Sunday: Closed"
             },
             "contact": { "title": "Contact" }
@@ -244,8 +244,8 @@ window.__translations = {
             "address": { "title": "Indirizzo" },
             "hours": {
                 "title": "Orari di Apertura",
-                "weekdays": "Lunedì - Venerdì: 09:00 - 17:00",
-                "saturday": "Sabato: Su appuntamento",
+                "weekdays": "Lunedì - Venerdì: 08:00 - 17:00",
+                "saturday": "Sabato: 08:00 - 12:00",
                 "sunday": "Domenica: Chiuso"
             },
             "contact": { "title": "Contatti" }
@@ -334,8 +334,8 @@ window.__translations = {
             "address": { "title": "Adresse" },
             "hours": {
                 "title": "Öffnungszeiten",
-                "weekdays": "Montag - Freitag: 09:00 - 17:00",
-                "saturday": "Samstag: Nach Vereinbarung",
+                "weekdays": "Montag - Freitag: 08:00 - 17:00",
+                "saturday": "Samstag: 08:00 - 12:00",
                 "sunday": "Sonntag: Geschlossen"
             },
             "contact": { "title": "Kontakt" }
