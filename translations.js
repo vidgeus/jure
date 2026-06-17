@@ -6,8 +6,9 @@ window.__translations = {
             "role": "Odvjetnik"
         },
         "seo": {
-            "title": "Odvjetnik Jurica Gaćina | Imovinsko pravo, Poreč",
-            "description": "Odvjetnički ured Jurica Gaćina u Poreču specijaliziran za imovinsko pravo: kupoprodaja nekretnina, nasljeđivanje, ugovori, stvarno pravo i pravni sporovi."
+            "title": "Odvjetnik Poreč – Jurica Gaćina | Imovinsko pravo",
+            "description": "Odvjetnik u Poreču – Jurica Gaćina. Imovinsko pravo: kupoprodaja nekretnina, nasljeđivanje, ugovori i pravni sporovi.",
+            "keywords": "odvjetnik Poreč, odvjetnik Porec, odvjetnički ured Poreč, imovinsko pravo Poreč, pravnik Poreč, odvjetnik Jurica Gaćina"
         },
         "nav": {
             "practice": "Područja prakse",
@@ -96,8 +97,9 @@ window.__translations = {
             "role": "Attorney"
         },
         "seo": {
-            "title": "Jurica Gaćina, Attorney | Property Law in Poreč",
-            "description": "Law office of Jurica Gaćina in Poreč specialised in property law: real-estate transactions, inheritance, contracts and legal disputes."
+            "title": "Attorney in Poreč – Jurica Gaćina | Property Law",
+            "description": "Attorney in Poreč – Jurica Gaćina. Property law: real-estate transactions, inheritance, contracts and legal disputes.",
+            "keywords": "lawyer Poreč, attorney Poreč, lawyer Porec, lawyer in Poreč Croatia, property law Poreč, real estate lawyer Istria"
         },
         "nav": {
             "practice": "Practice Areas",
@@ -186,8 +188,9 @@ window.__translations = {
             "role": "Avvocato"
         },
         "seo": {
-            "title": "Avvocato Jurica Gaćina | Diritto immobiliare, Parenzo",
-            "description": "Studio legale Jurica Gaćina a Parenzo (Poreč), specializzato in diritto immobiliare: compravendite, successioni, contratti e controversie legali."
+            "title": "Avvocato a Parenzo – Jurica Gaćina | Diritto immobiliare",
+            "description": "Avvocato a Parenzo (Poreč) – Jurica Gaćina. Diritto immobiliare: compravendite, successioni, contratti e controversie.",
+            "keywords": "avvocato Parenzo, avvocato Poreč, avvocato Porec, avvocato Croazia Istria, diritto immobiliare Parenzo"
         },
         "nav": {
             "practice": "Aree di Pratica",
@@ -276,8 +279,9 @@ window.__translations = {
             "role": "Rechtsanwalt"
         },
         "seo": {
-            "title": "Rechtsanwalt Jurica Gaćina | Immobilienrecht, Poreč",
-            "description": "Anwaltskanzlei Jurica Gaćina in Poreč, spezialisiert auf Immobilienrecht: Immobilienkauf, Erbschaft, Verträge und Rechtsstreitigkeiten."
+            "title": "Rechtsanwalt in Poreč – Jurica Gaćina | Immobilienrecht",
+            "description": "Rechtsanwalt in Poreč – Jurica Gaćina. Immobilienrecht: Immobilienkauf, Erbschaft, Verträge und Rechtsstreitigkeiten.",
+            "keywords": "Rechtsanwalt Poreč, Rechtsanwalt Porec, Anwalt Poreč, Anwalt Kroatien Istrien, Immobilienrecht Poreč"
         },
         "nav": {
             "practice": "Tätigkeitsbereiche",

@@ -71,6 +71,7 @@ function render(lang) {
     // 2) Per-page SEO tokens.
     const title = getNested(t, 'seo.title');
     const desc = getNested(t, 'seo.description');
+    const keywords = getNested(t, 'seo.keywords') || '';
     const url = SITE + PATHS[lang];
     const ogAlt = LANGS.filter((l) => l !== lang)
         .map((l) => `    <meta property="og:locale:alternate" content="${LOCALES[l]}">`)
@@ -82,6 +83,7 @@ function render(lang) {
         .split('{{DESC}}').join(escAttr(desc))
         .split('{{DESC_JSON}}').join(escJson(desc))
         .split('{{URL}}').join(url)
+        .split('{{KEYWORDS}}').join(escAttr(keywords))
         .split('{{OG_LOCALE}}').join(LOCALES[lang])
         .replace('{{OG_ALT}}', ogAlt);
 
