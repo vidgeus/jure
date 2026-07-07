@@ -86,9 +86,6 @@ window.__translations = {
         },
         "footer": {
             "copyright": "Sva prava pridržana"
-        },
-        "presentation": {
-            "hide": "Sakrij elemente dizajna"
         }
     },
 
@@ -177,9 +174,6 @@ window.__translations = {
         },
         "footer": {
             "copyright": "All rights reserved"
-        },
-        "presentation": {
-            "hide": "Hide design controls"
         }
     },
 
@@ -268,9 +262,6 @@ window.__translations = {
         },
         "footer": {
             "copyright": "Tutti i diritti riservati"
-        },
-        "presentation": {
-            "hide": "Nascondi controlli di design"
         }
     },
 
@@ -359,9 +350,6 @@ window.__translations = {
         },
         "footer": {
             "copyright": "Alle Rechte vorbehalten"
-        },
-        "presentation": {
-            "hide": "Designsteuerung ausblenden"
         }
     }
 };

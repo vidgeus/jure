@@ -4,7 +4,7 @@
   Edit this file (structure) and translations.js (content), then run: node build.js
   Tokens ({{...}}) and every data-i18n element are filled in per language by build.js.
 -->
-<html lang="hr">
+<html lang="hr" data-theme="midnight" data-presentation="true">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,31 +64,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://images.unsplash.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@400;500;700&family=EB+Garamond:wght@400;500;600;700&family=Josefin+Slab:wght@400;600;700&display=swap" rel="stylesheet">
-    <script>
-        /* Apply saved display settings before first paint so the page never
-           flashes the default theme/font. Defaults mirror app.js — keep in sync. */
-        (function () {
-            try {
-                var ls = window.localStorage;
-                var theme = (ls && ls.getItem('site-theme')) || 'midnight';
-                if (theme !== 'default') document.documentElement.setAttribute('data-theme', theme);
-                var fonts = {
-                    'josefin-slab': "'Josefin Slab', serif",
-                    'eb-garamond': "'EB Garamond', serif",
-                    'playfair': "'Playfair Display', serif",
-                    'cinzel': "'Cinzel', serif"
-                };
-                var font = (ls && ls.getItem('name-font')) || 'playfair';
-                if (fonts[font]) document.documentElement.style.setProperty('--name-font', fonts[font]);
-                var blur = ls && ls.getItem('hero-blur');
-                if (blur === null || blur === undefined) blur = '3'; // default blur
-                document.documentElement.style.setProperty('--hero-blur', Math.max(0, Math.min(100, Number(blur) || 0)) + 'px');
-                var pres = ls ? ls.getItem('presentation-mode') : null;
-                if (pres === null || pres === 'true') document.documentElement.setAttribute('data-presentation', 'true');
-            } catch (e) {}
-        })();
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Structured data for local SEO (rich results in Google).
          NOTE: streetAddress, telephone, email and geo coordinates below are
@@ -185,46 +161,6 @@
                 </div>
             </div>
         </nav>
-        <!-- Design controls bar (visible only when presentation mode is off) -->
-        <div class="design-bar">
-            <div class="container">
-                <div class="design-bar-inner">
-                    <div class="theme-switcher">
-                        <select id="theme-select" class="theme-select" aria-label="Select design">
-                            <option value="default">Classic</option>
-                            <option value="marble">Marble &amp; Navy</option>
-                            <option value="burgundy">Burgundy &amp; Gold</option>
-                            <option value="forest">Forest &amp; Brass</option>
-                            <option value="library">Old Library</option>
-                            <option value="midnight">Midnight Court</option>
-                            <option value="batman">Batman</option>
-                        </select>
-                    </div>
-                    <div class="font-control">
-                        <select id="font-select" class="font-select" aria-label="Lawyer name font">
-                            <option value="default">Default</option>
-                            <option value="josefin-slab">Josefin Slab</option>
-                            <option value="eb-garamond">EB Garamond</option>
-                            <option value="playfair">Playfair Display</option>
-                            <option value="cinzel">Cinzel</option>
-                        </select>
-                    </div>
-                    <div class="blur-control">
-                        <label for="blur-input" class="blur-label">Blur</label>
-                        <input
-                            type="number"
-                            id="blur-input"
-                            class="blur-input"
-                            min="0"
-                            max="100"
-                            step="1"
-                            value="3"
-                            aria-label="Hero image blur (0-100)"
-                        >
-                    </div>
-                </div>
-            </div>
-        </div>
     </header>
 
     <!-- Hero Section -->
@@ -415,14 +351,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Design controls toggle (below footer) -->
-    <div class="design-toggle-bar">
-        <label class="presentation-toggle">
-            <input type="checkbox" id="presentation-toggle" checked>
-            <span>Sakrij elemente dizajna</span>
-        </label>
-    </div>
 
     <script src="/app.js"></script>
 </body>

@@ -8,6 +8,8 @@
     --text-dark: #2c3e50;
     --text-light: #5a6373;
     --hero-name-color: var(--accent-color);
+    --name-font: 'Playfair Display', serif;
+    --hero-blur: 3px;
     --bg-light: #ecf0f1;
     --bg-white: #ffffff;
     --border-color: #dfe6e9;
@@ -85,22 +87,6 @@ body {
 
 .navbar.scrolled {
     box-shadow: var(--shadow-md);
-}
-
-/* Secondary bar holding the design controls; only shown when
-   presentation mode is off (see [data-presentation] rule below). */
-.design-bar {
-    background: var(--bg-light);
-    border-top: 1px solid var(--border-color);
-    box-shadow: var(--shadow-sm);
-}
-
-.design-bar-inner {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 1.5rem;
-    padding: 0.6rem 0;
 }
 
 .nav-content {
@@ -695,36 +681,9 @@ body {
     opacity: 0.8;
 }
 
-.presentation-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.85rem;
-    cursor: pointer;
-    user-select: none;
-}
-
-.presentation-toggle input[type="checkbox"] {
-    cursor: pointer;
-}
-
-/* Sits as its own strip directly below the footer; matches the footer's dark
-   palette so it reads correctly in every theme. */
-.design-toggle-bar {
-    background: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 1rem 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-}
-
 /* ===========================
-   Presentation Mode (controls hidden, navbar split into thirds)
+   Navbar layout (logo · nav-links · language, split into thirds on desktop)
    =========================== */
-[data-presentation="true"] .design-bar {
-    display: none;
-}
-
 [data-presentation="true"] .nav-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -795,13 +754,6 @@ body {
 
     .mobile-menu-toggle {
         display: flex;
-    }
-
-    /* Center and tighten the design controls so they fit a narrow screen. */
-    .design-bar-inner {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 0.75rem;
     }
 
     /* Replace language buttons with a compact dropdown on mobile */
@@ -920,213 +872,7 @@ body {
 }
 
 /* ===========================
-   Theme Switcher
-   =========================== */
-.theme-switcher {
-    position: relative;
-}
-
-.theme-select {
-    padding: 0.4rem 0.8rem;
-    border: 1px solid var(--border-color);
-    background: transparent;
-    color: var(--text-dark);
-    cursor: pointer;
-    border-radius: 4px;
-    font-weight: 500;
-    font-family: inherit;
-    font-size: 0.95rem;
-    transition: var(--transition);
-}
-
-.theme-select:hover {
-    border-color: var(--accent-color);
-    color: var(--accent-color);
-}
-
-.theme-select:focus {
-    outline: none;
-    border-color: var(--accent-color);
-}
-
-@media (max-width: 768px) {
-    .theme-select {
-        padding: 0.3rem 0.5rem;
-        font-size: 0.85rem;
-    }
-}
-
-/* Font picker (lawyer name) */
-.font-control {
-    display: flex;
-    align-items: center;
-}
-
-.font-select {
-    padding: 0.4rem 0.8rem;
-    border: 1px solid var(--border-color);
-    background: transparent;
-    color: var(--text-dark);
-    cursor: pointer;
-    border-radius: 4px;
-    font-weight: 500;
-    font-family: inherit;
-    font-size: 0.95rem;
-    transition: var(--transition);
-}
-
-.font-select:hover,
-.font-select:focus {
-    border-color: var(--accent-color);
-    outline: none;
-}
-
-@media (max-width: 768px) {
-    .font-select {
-        padding: 0.3rem 0.5rem;
-        font-size: 0.85rem;
-    }
-}
-
-.blur-control {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-}
-
-.blur-label {
-    font-size: 0.85rem;
-    color: var(--text-light);
-    font-weight: 500;
-}
-
-.blur-input {
-    width: 4rem;
-    padding: 0.4rem 0.5rem;
-    border: 1px solid var(--border-color);
-    background: transparent;
-    color: var(--text-dark);
-    border-radius: 4px;
-    font-family: inherit;
-    font-size: 0.95rem;
-    transition: var(--transition);
-}
-
-.blur-input:hover,
-.blur-input:focus {
-    border-color: var(--accent-color);
-    outline: none;
-}
-
-@media (max-width: 768px) {
-    .blur-input {
-        width: 3.5rem;
-        padding: 0.3rem 0.4rem;
-        font-size: 0.85rem;
-    }
-}
-
-/* ===========================
-   Theme: Marble & Navy (light, classic upscale)
-   =========================== */
-[data-theme="marble"] {
-    --primary-color: #1a2332;
-    --secondary-color: #2c3e50;
-    --accent-color: #a07a1a;
-    --text-dark: #1a2332;
-    --text-light: #5a6373;
-    --bg-light: #efe9dc;
-    --bg-white: #faf7f2;
-    --border-color: #d4cfc4;
-    --shadow-sm: 0 2px 4px rgba(26, 35, 50, 0.08);
-    --shadow-md: 0 4px 12px rgba(26, 35, 50, 0.12);
-    --shadow-lg: 0 8px 24px rgba(26, 35, 50, 0.18);
-}
-
-[data-theme="marble"] body { background: var(--bg-white); }
-[data-theme="marble"] .navbar { background: var(--bg-white); }
-[data-theme="marble"] .practice-card,
-[data-theme="marble"] .info-item,
-[data-theme="marble"] .contact-form { background: var(--bg-white); }
-[data-theme="marble"] .btn-primary:hover { background: #8a6816; }
-
-/* ===========================
-   Theme: Burgundy & Gold (traditional, warm)
-   =========================== */
-[data-theme="burgundy"] {
-    --primary-color: #6b1f2d;
-    --secondary-color: #8b2635;
-    --accent-color: #a07a1a;
-    --hero-name-color: #d4a847;
-    --text-dark: #2d1517;
-    --text-light: #6b5d5e;
-    --bg-light: #f5ede4;
-    --bg-white: #fdfbf7;
-    --border-color: #e0d5c7;
-    --shadow-sm: 0 2px 4px rgba(107, 31, 45, 0.08);
-    --shadow-md: 0 4px 12px rgba(107, 31, 45, 0.12);
-    --shadow-lg: 0 8px 24px rgba(107, 31, 45, 0.18);
-}
-
-[data-theme="burgundy"] body { background: var(--bg-white); }
-[data-theme="burgundy"] .navbar { background: var(--bg-white); }
-[data-theme="burgundy"] .practice-card,
-[data-theme="burgundy"] .info-item,
-[data-theme="burgundy"] .contact-form { background: var(--bg-white); }
-[data-theme="burgundy"] .btn-primary:hover { background: #5a1923; }
-
-/* ===========================
-   Theme: Forest & Brass (authoritative)
-   =========================== */
-[data-theme="forest"] {
-    --primary-color: #1e3a2f;
-    --secondary-color: #2d5a3d;
-    --accent-color: #8b6914;
-    --hero-name-color: #d4a847;
-    --text-dark: #1a2920;
-    --text-light: #5c6b5c;
-    --bg-light: #efebe0;
-    --bg-white: #fbfaf5;
-    --border-color: #d4d0c0;
-    --shadow-sm: 0 2px 4px rgba(30, 58, 47, 0.08);
-    --shadow-md: 0 4px 12px rgba(30, 58, 47, 0.12);
-    --shadow-lg: 0 8px 24px rgba(30, 58, 47, 0.18);
-}
-
-[data-theme="forest"] body { background: var(--bg-white); }
-[data-theme="forest"] .navbar { background: var(--bg-white); }
-[data-theme="forest"] .practice-card,
-[data-theme="forest"] .info-item,
-[data-theme="forest"] .contact-form { background: var(--bg-white); }
-[data-theme="forest"] .btn-primary:hover { background: #6e5310; }
-
-/* ===========================
-   Theme: Old Library (scholarly, parchment)
-   =========================== */
-[data-theme="library"] {
-    --primary-color: #3a2618;
-    --secondary-color: #5d3b22;
-    --accent-color: #8b6914;
-    --hero-name-color: #d4a847;
-    --text-dark: #2a1a0f;
-    --text-light: #5d4a37;
-    --bg-light: #ead9bb;
-    --bg-white: #f5e8d3;
-    --border-color: #c4a574;
-    --shadow-sm: 0 2px 4px rgba(58, 38, 24, 0.1);
-    --shadow-md: 0 4px 12px rgba(58, 38, 24, 0.15);
-    --shadow-lg: 0 8px 24px rgba(58, 38, 24, 0.22);
-}
-
-[data-theme="library"] body { background: var(--bg-white); }
-[data-theme="library"] .navbar { background: var(--bg-white); }
-[data-theme="library"] .practice-card,
-[data-theme="library"] .info-item,
-[data-theme="library"] .contact-form { background: #fbf3e0; }
-[data-theme="library"] .btn-primary:hover { background: #6e5310; }
-
-/* ===========================
-   Theme: Midnight Court (sophisticated dark)
+   Theme: Midnight Court (the site's fixed theme)
    =========================== */
 [data-theme="midnight"] {
     --primary-color: #050810;
@@ -1179,72 +925,8 @@ body {
     border-top: 1px solid var(--accent-color);
 }
 
-/* ===========================
-   Theme: Batman (dark, gold accent)
-   =========================== */
-[data-theme="batman"] {
-    --primary-color: #000000;
-    --secondary-color: #1a1a1a;
-    --accent-color: #ffd700;
-    --text-dark: #f5f5f5;
-    --text-light: #aaaaaa;
-    --bg-light: #1a1a1a;
-    --bg-white: #0f0f0f;
-    --border-color: #333333;
-    --success-color: #ffd700;
-    --error-color: #ff5555;
-    --shadow-sm: 0 2px 4px rgba(255, 215, 0, 0.1);
-    --shadow-md: 0 4px 12px rgba(255, 215, 0, 0.15);
-    --shadow-lg: 0 8px 24px rgba(255, 215, 0, 0.2);
-}
-
-[data-theme="batman"] body { background: var(--bg-white); }
-[data-theme="batman"] .navbar {
-    background: var(--bg-white);
-    border-bottom: 1px solid var(--border-color);
-}
-[data-theme="batman"] .practice-card,
-[data-theme="batman"] .info-item,
-[data-theme="batman"] .contact-form {
-    background: var(--bg-light);
-    border: 1px solid var(--border-color);
-}
-[data-theme="batman"] .form-group input,
-[data-theme="batman"] .form-group textarea {
-    background: var(--bg-white);
-    color: var(--text-dark);
-}
-[data-theme="batman"] .btn-primary {
-    background: var(--accent-color);
-    color: #000;
-}
-[data-theme="batman"] .btn-primary:hover {
-    background: #e6c200;
-    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
-}
-[data-theme="batman"] .form-message.success {
-    background: #2a2a00;
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-[data-theme="batman"] .form-message.error {
-    background: #2a0000;
-    color: #ff8888;
-    border-color: #5a2020;
-}
-[data-theme="batman"] .footer {
-    border-top: 1px solid var(--accent-color);
-}
-
-/* ===========================
-   Dark theme heading contrast fixes
-   (headings normally use --primary-color for text;
-    in dark themes that's near-black on dark bg, so override)
-   =========================== */
-[data-theme="batman"] .logo,
-[data-theme="batman"] .section-header h2,
-[data-theme="batman"] .practice-card h3,
-[data-theme="batman"] .info-item h3,
+/* Headings normally use --primary-color for text; on the dark theme that's
+   near-black on a dark bg, so override to the light --text-dark. */
 [data-theme="midnight"] .logo,
 [data-theme="midnight"] .section-header h2,
 [data-theme="midnight"] .practice-card h3,
