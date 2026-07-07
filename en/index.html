@@ -82,7 +82,8 @@
                 var font = (ls && ls.getItem('name-font')) || 'playfair';
                 if (fonts[font]) document.documentElement.style.setProperty('--name-font', fonts[font]);
                 var blur = ls && ls.getItem('hero-blur');
-                if (blur) document.documentElement.style.setProperty('--hero-blur', Math.max(0, Math.min(100, Number(blur) || 0)) + 'px');
+                if (blur === null || blur === undefined) blur = '3'; // default blur
+                document.documentElement.style.setProperty('--hero-blur', Math.max(0, Math.min(100, Number(blur) || 0)) + 'px');
                 var pres = ls ? ls.getItem('presentation-mode') : null;
                 if (pres === null || pres === 'true') document.documentElement.setAttribute('data-presentation', 'true');
             } catch (e) {}
@@ -217,7 +218,7 @@
                             min="0"
                             max="100"
                             step="1"
-                            value="0"
+                            value="3"
                             aria-label="Hero image blur (0-100)"
                         >
                     </div>
