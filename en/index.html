@@ -8,18 +8,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        /* Force HTTPS in production. Runs before any stylesheet/asset is fetched,
-           so the HTTP page never renders (which is where the stale CSS / unstyled
-           blue links came from). Skips localhost so local dev over http works.
-           GitHub Pages should ALSO have "Enforce HTTPS" enabled for a server 301. */
-        (function () {
-            var h = location.hostname;
-            if (location.protocol === 'http:' && h !== 'localhost' && h !== '127.0.0.1' && h !== '0.0.0.0') {
-                location.replace('https://' + location.host + location.pathname + location.search + location.hash);
-            }
-        })();
-    </script>
     <title>Attorney in Poreč – Jurica Gaćina | Property Law</title>
     <meta name="description" content="Attorney in Poreč – Jurica Gaćina. Property law: real-estate transactions, inheritance, contracts and legal disputes.">
     <meta name="keywords" content="lawyer Poreč, attorney Poreč, lawyer Porec, lawyer in Poreč Croatia, property law Poreč, real estate lawyer Istria">
