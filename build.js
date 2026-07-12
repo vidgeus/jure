@@ -23,6 +23,7 @@ const path = require('path');
 const vm = require('vm');
 
 const ROOT = __dirname;
+const DOCS = path.join(ROOT, 'docs'); // GitHub Pages publishing source (the only files served to the web)
 const SITE = 'https://odvjetnik-gacina.hr';
 
 const LANGS = ['hr', 'en', 'it', 'de'];
@@ -112,10 +113,10 @@ function render(lang) {
 // --- write pages ---
 for (const lang of LANGS) {
     const html = render(lang);
-    const outDir = lang === 'hr' ? ROOT : path.join(ROOT, lang);
+    const outDir = lang === 'hr' ? DOCS : path.join(DOCS, lang);
     fs.mkdirSync(outDir, { recursive: true });
     fs.writeFileSync(path.join(outDir, 'index.html'), html, 'utf8');
-    console.log('  wrote', path.relative(ROOT, path.join(outDir, 'index.html')) || 'index.html');
+    console.log('  wrote', path.relative(ROOT, path.join(outDir, 'index.html')));
 }
 
 // --- regenerate sitemap.xml with hreflang alternates ---
@@ -140,7 +141,7 @@ const sitemap =
     ).join('\n') +
     `\n</urlset>\n`;
 
-fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemap, 'utf8');
-console.log('  wrote sitemap.xml');
+fs.writeFileSync(path.join(DOCS, 'sitemap.xml'), sitemap, 'utf8');
+console.log('  wrote docs/sitemap.xml');
 
 console.log(missing ? `Done with ${missing} missing translation(s).` : 'Done.');
