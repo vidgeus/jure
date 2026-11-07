@@ -1,0 +1,10 @@
+
+
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://odvjetnik-gacina.hr/sitemap.xml
